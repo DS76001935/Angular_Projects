@@ -1,0 +1,13 @@
+<form >
+<label for="fname">First Name :</label>
+<input type="text" name="fname"   [(ngModel)]="fname" /><br><br>
+<label for="lname">Last Name :</label>
+<input type="text" name="lname" [(ngModel)]="lname" /><br><br>
+<label for="age">Age :</label>
+<input type="number" name="age" [(ngModel)]="age" /><br><br>
+<label for="email">Email :</label>
+<input type="email"name="email"  [(ngModel)]="email" /><br><br>
+<label for="password">Password :</label>
+<input type="password" name="password"  [(ngModel)]="password" /><br><br>
+<button (click)="save()">Save</button><br><br>
+</form>
