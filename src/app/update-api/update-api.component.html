@@ -1,1 +1,9 @@
-<p>update-api works!</p>
+<form >
+    <label for="fname">First Name :</label>
+    <input type="text" name="firstName" [(ngModel)]="firstName" /><br><br>
+    <label for="lname">Last Name :</label>
+    <input type="text" name="lastName" [(ngModel)]="lastName" /><br><br>
+    <label for="age">Age :</label>
+    <input type="number" name="uAge" [(ngModel)]="uAge" /><br><br>
+    <button (click)="update()">Update</button><br><br>
+    </form>

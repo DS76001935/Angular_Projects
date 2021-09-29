@@ -8,6 +8,8 @@ import { LogoutApiComponent } from './logout-api/logout-api.component';
 import { RegisterComponent } from './register/register.component';
 import { SaveApiComponent } from './save-api/save-api.component';
 import { SignupComponent } from './signup/signup.component';
+import { UpdateApiComponent } from './update-api/update-api.component';
+import { ViewApiComponent } from './view-api/view-api.component';
 
 const routes: Routes = [
   {path:"login", component:LoginApiComponent},
@@ -17,7 +19,9 @@ const routes: Routes = [
   {path:"editUser/:userId",component:EditComponent},
   {path:"signup",component:SaveApiComponent},
   {path:"admin",component:AdminHomeComponent},
-  {path:"logout",component:LogoutApiComponent}
+  {path:"logout",component:LogoutApiComponent},
+  {path:"updateUser/:userId",component:UpdateApiComponent},
+  {path:"view/:userId",component:ViewApiComponent}
 ];
 
 @NgModule({

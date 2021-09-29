@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ClientService } from '../client.service';
 import { NotificationService } from '../notification.service';
 import { Users } from '../users';
@@ -30,6 +30,26 @@ export class HomeApiComponent implements OnInit {
      }
       
     });
+  }
+  removeUser(userId:number){
+    this.clientService.deleteUser(userId).subscribe(resp=>{
+
+      let index = this.users.findIndex(user=> user.userId == userId)
+      console.log("Deleted Index Number : ",index);
+      
+      this.users.splice(index,1)
+      this.notification.showSuccess("The user has deleted.","Success",{timeout:3000})
+    });
+  }
+
+  updateUser(userId:number){
+    console.log("Updated id =>",userId);
+    this.router.navigateByUrl("/updateUser/"+userId)
+  }
+
+  viewUser(userId:number){
+    console.log("View Button has clicked.");
+      this.router.navigateByUrl("/view/"+userId)
   }
 
 }

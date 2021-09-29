@@ -18,6 +18,7 @@ import { HomeApiComponent } from './home-api/home-api.component';
 import { UpdateApiComponent } from './update-api/update-api.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { LogoutApiComponent } from './logout-api/logout-api.component';
+import { ViewApiComponent } from './view-api/view-api.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { LogoutApiComponent } from './logout-api/logout-api.component';
     HomeApiComponent,
     UpdateApiComponent,
     AdminHomeComponent,
-    LogoutApiComponent
+    LogoutApiComponent,
+    ViewApiComponent
   ],
   imports: [
     BrowserModule,
